@@ -23,8 +23,8 @@ function fe = feSet(fe,param,val,varargin)
 %  email: pestillifranco@gmail.com and ccaiafa@gmail.com
 
 % Check for input parameters
-if notDefined('fe'),    error('fe structure required'); end
-if notDefined('param'), error('param required'); end
+if ieNotDefined('fe'),    error('fe structure required'); end
+if ieNotDefined('param'), error('param required'); end
 if ~exist('val','var'), error('Value required'); end
 
 % Squeeze out spaces and force lower case

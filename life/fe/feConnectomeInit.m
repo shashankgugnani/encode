@@ -17,7 +17,7 @@ function fe = feConnectomeInit(dwiFile,fgFileName,feFileName,savedir,dwiFileRepe
 fe = feCreate;
 
 % Set the based dir for fe, this dire will be used 
-if notDefined('savedir')
+if ieNotDefined('savedir')
     if isstruct(fgFileName)
         savedir = fullfile(fileparts(fgFileName.name),'life');
     else
@@ -37,7 +37,7 @@ if isstruct(fgFileName),  n  = fgFileName.name;
 else                   [~,n] = fileparts(fgFileName);
 end
 
-if notDefined('feFileName'),
+if ieNotDefined('feFileName'),
   feFileName = sprintf('%s-%s', datestr(now,30),n);
 end
 fe = feSet(fe, 'name',feFileName);
@@ -56,12 +56,12 @@ fe = feSet(fe,'roi fg',[]); clear fg
 fe = feConnectomeSetDwi(fe,dwiFile,0);
 
 % Information about a repeated measurement of the diffusion data.
-if ~notDefined('dwiFileRepeated')
+if ~ieNotDefined('dwiFileRepeated')
   fe = feConnectomeSetDwi(fe,dwiFileRepeated,1);
 end
 
 %% Anatomy Install the path tot he anatomical high-resolution file.
-if ~notDefined('anatomyFile')
+if ~ieNotDefined('anatomyFile')
   fe = feSet(fe,'anatomy file',anatomyFile);
 end
 

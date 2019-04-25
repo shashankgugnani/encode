@@ -14,7 +14,7 @@ function [se, figs, rmse_wVL, rmse_woVL, nFib_tract, nFib_PN, nVoxels] =  feVirt
 %
 % Copyright (2016), Franco Pestilli, Indiana University, frakkopesto@gmail.com
 
- if notDefined('display'),   
+ if ieNotDefined('display'),   
     display.tract = 0;
     display.distributions = 0; 
     display.evidence = 0; 

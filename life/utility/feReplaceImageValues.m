@@ -17,7 +17,7 @@ function img = feReplaceImageValues(img,vals,coords,indexes)
 
 % If index is not passed, then copy the data into all of the slots in the
 % 4th dimension
-if notDefined('indexes'),   indexes = 1:size(img,4); end
+if ieNotDefined('indexes'),   indexes = 1:size(img,4); end
 if ~( length(indexes) <= size(img,4) )
   error('Image and vals do not have the same size.')
 end

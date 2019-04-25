@@ -21,7 +21,7 @@ function fe = feConnectomeSetDwi(fe,dwiFileName,isrepeat)
 %  email: pestillifranco@gmail.com and ccaiafa@gmail.com
 
 % Check inputs
-if notDefined('isrepeat'), isrepeat=0;end
+if ieNotDefined('isrepeat'), isrepeat=0;end
 
 % Build a tag for the calls to feSet.
 if isrepeat, tag = sprintf('repeat');

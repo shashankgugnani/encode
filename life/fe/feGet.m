@@ -934,7 +934,7 @@ switch param
     %val = M_times_w(feGet(fe,'Mfiber'),feGet(fe,'fiber weights'));
     nTheta  = feGet(fe,'nbvecs');
     nVoxels = feGet(fe,'nvoxels');  
-    val = M_times_w(fe.life.M.Phi.subs(:,1),fe.life.M.Phi.subs(:,2),fe.life.M.Phi.subs(:,3),fe.life.M.Phi.vals,fe.life.M.DictSig,feGet(fe,'fiber weights'),nTheta,nVoxels);
+    val = M_times_w_seq(fe.life.M.Phi.subs(:,1),fe.life.M.Phi.subs(:,2),fe.life.M.Phi.subs(:,3),fe.life.M.Phi.vals,fe.life.M.DictSig,feGet(fe,'fiber weights'),nTheta,nVoxels);
     
     if ~isempty(varargin)
       % voxelIndices     = feGet(fe,'voxelsindices',varargin);

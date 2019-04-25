@@ -11,7 +11,7 @@ function fe = feConnectomeEncoding(fe)
 %  email: pestillifranco@gmail.com and ccaiafa@gmail.com
 %
 
-if notDefined('fe'),  error('LiFE (fe = feCreate) struct needed'); end
+if ieNotDefined('fe'),  error('LiFE (fe = feCreate) struct needed'); end
 if ~isfield(fe,'life')
   error('LiFE - the field ''life'' is necessary in the fe structure.')
 end
